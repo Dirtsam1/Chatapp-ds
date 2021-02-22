@@ -63,6 +63,10 @@ a {
   background-color: #214151;
   position: relative;
 }
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* unorder list class */
 .links {
