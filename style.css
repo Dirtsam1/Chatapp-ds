@@ -3,10 +3,12 @@
   padding: 0;
   box-sizing: 0;
 }
-
+body {
+  overflow-x: hidden;
+}
 /* Utilities */
 .container {
-  margin: 0 auto;
+  margin: auto;
   max-width: 1160px;
 }
 .flexbox {
@@ -19,8 +21,12 @@ img {
 }
 
 .left-block {
-  min-width: 500px;
-  margin: 0 60px 100px 0;
+  margin-right: 60px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.right-block {
+  max-width: 600px;
 }
 
 h1,
@@ -51,10 +57,10 @@ a {
 
 /* Navbar */
 .navbar {
+  width: auto;
+  height: auto;
   padding: 0 60px;
   background-color: #214151;
-  display: flex;
-  justify-content: space-between;
   position: relative;
 }
 
@@ -112,7 +118,7 @@ a {
   color: #fff;
   display: none;
 }
-.topnav {
+.navbar .topnav {
   height: 0%;
   width: 100%;
   position: fixed;
@@ -124,6 +130,7 @@ a {
   overflow-y: hidden;
   transition: all 0.5s ease;
 }
+
 .overlay-content {
   position: relative;
   top: 25%;
@@ -172,7 +179,7 @@ a {
   font-family: "poppins";
   font-weight: semi-bold;
   color: #fff;
-  animation: ghost-heading forwards 0.6s ease;
+  animation: ghost-heading 0.8s ease;
 }
 
 @keyframes ghost-heading {
@@ -190,14 +197,14 @@ a {
   font-weight: 400;
   color: #fff;
   margin-bottom: 60px;
-  animation: hero-paragraph ease-in-out 0.5s;
+  animation: hero-paragraph ease 0.5s;
 }
 @keyframes hero-paragraph {
   0% {
-    transform: scale(0);
+    transform: translateY(-100px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -230,8 +237,9 @@ a {
   right: 85%;
   bottom: 0;
   width: 100vw;
-  border-bottom: 10vw solid #fff;
+  border-bottom: 10vw solid rgb(255, 255, 255);
   border-left: 100vw solid transparent;
+  overflow: hidden;
 }
 
 /* SHOWCASE SECTION */
@@ -310,17 +318,20 @@ a {
   justify-content: start;
   align-items: flex-start;
 }
+.star {
+  width: 100px;
+}
 /* paragraph */
 .star-flexbox p {
   color: #333;
   margin-right: 40px;
   margin-left: 20px;
-  /* margin-top: -5px; */
+  margin-top: -5px;
 }
 
 /* FOOTER */
 .footer {
-  padding: 60px;
+  padding: 60px 60px 0 60px;
   width: auto;
   height: auto;
 }
@@ -343,22 +354,29 @@ a {
 }
 
 .column p {
-  font-size: 20px;
+  font-size: 18px;
   color: #2a353e;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .column a {
   margin: 10px 0;
-  font-size: 18px;
-}
-.copyright {
-  margin-top: 180px;
-  text-align: center;
   font-size: 16px;
 }
-strong {
+.copyright {
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 20px;
+  max-width: 1160px;
+  margin: auto;
+}
+.copyright strong {
   color: #ec4646;
+}
+.copyright p {
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 14px;
 }
 
 /* MEDIA QUERY SCREEN BLEOW OR 991PX  */
